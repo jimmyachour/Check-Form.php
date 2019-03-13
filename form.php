@@ -30,26 +30,26 @@ session_start();
                     <div class="form-box-1 col-12 col-md-5">
                         <div class="form-group col-12">
                             <label for="name"></label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Nom">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Nom" required>
                             <?= $_SESSION['errors']['name'] ?>
                         </div>
                         <div class="form-group col-12">
                             <label for="input-lastName"></label>
-                            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Prenom">
+                            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Prenom" required>
                             <?= $_SESSION['errors']['lastName'] ?>
                         </div>
                         <div class="form-group col-12">
                             <label for="mail"></label>
-                            <input type="email" class="form-control" name="mail" id="mail" placeholder="Email">
+                            <input type="email" class="form-control" name="mail" id="mail" placeholder="Email" required>
                             <?= $_SESSION['errors']['mail'] ?>
                         </div>
                         <div class="form-group col-12">
                             <label for="phone"></label>
-                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Téléphone">
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Téléphone" required>
                             <?= $_SESSION['errors']['phone'] ?>
                         </div>
                         <div class="form-group col-12">
-                            <select name="subject" class="form-control">
+                            <select name="subject" class="form-control" required>
                                 <option value="" disabled selected>Liste de choix</option>
                                 <option value="1">Date de reservation</option>
                                 <option value="2">Probleme de paiement</option>
@@ -61,7 +61,7 @@ session_start();
                     <div class="form-box-2 col-12 col-md-5">
                         <div class="form-group col-12">
                             <label for="text"></label>
-                            <textarea class="form-control" id="text" name="text" rows="5" placeholder="Votre message"></textarea>
+                            <textarea class="form-control" id="text" name="text" rows="5" placeholder="Votre message" required></textarea>
                             <?= $_SESSION['errors']['text'] ?>
                             <button type="submit" class="btn col-12 contact-btn">Envoyer</button>
                         </div>
