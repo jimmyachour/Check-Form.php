@@ -1,0 +1,20 @@
+.formInput
+{
+    text-align: center;
+}
+
+.color-good-input
+{
+    color: #3ec33e;
+}
+
+.color-bad-input
+{
+    color: red;
+}
+
+.box-alert-container
+{
+    width: 30%;
+    margin:auto;
+}
