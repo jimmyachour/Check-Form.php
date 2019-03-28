@@ -15,6 +15,29 @@
 
 .box-alert-container
 {
-    width: 30%;
     margin:auto;
+}
+
+.box-alert-container{
+
+    margin-top: 30%;
+
+}
+
+.contact-btn
+{
+    margin-top: 30px;
+    color: white;
+    font-size: 25px;
+    background-color: black;
+    transition: 1s;
+
+}
+
+.contact-btn:hover
+{
+
+    color: #ffffff;
+    background-color: #da8484;
+    transition: 1s;
 }

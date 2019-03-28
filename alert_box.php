@@ -20,7 +20,7 @@ $badInput = '<div class="badInput">Pas bon : </div>';
 </head>
 <body>
 <div class="container-fluid">
-    <section class="form-container">
+    <section class="form-container col-8 offset-2">
         <div class="alert alert-success box-alert-container">
             Bravo !! Vous venez de remplir correctement le formulaire !
         </div>

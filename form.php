@@ -1,12 +1,6 @@
 <?php
 session_start();
-
-
-    $goodInput = '<div class="goodInput">OK</div>';
-    $badInput = '<div class="badInput">Pas bon : </div>';
-
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -31,22 +25,25 @@ session_start();
                         <div class="form-group col-12">
                             <label for="name"></label>
                             <input type="text" class="form-control" name="name" id="name" placeholder="Nom" required>
-                            <?= $_SESSION['errors']['name'] ?>
+                            <?php  if(isset($_SESSION['errors']['name'])){ echo $_SESSION['errors']['name']; } ?>
                         </div>
                         <div class="form-group col-12">
                             <label for="input-lastName"></label>
                             <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Prenom" required>
-                            <?= $_SESSION['errors']['lastName'] ?>
+                            <?php  if(isset($_SESSION['errors']['lastName'])){ echo $_SESSION['errors']['lastName']; } ?>
+                            <?= isset($_SESSION['errors']['lastName']) ?>
                         </div>
                         <div class="form-group col-12">
                             <label for="mail"></label>
                             <input type="email" class="form-control" name="mail" id="mail" placeholder="Email" required>
-                            <?= $_SESSION['errors']['mail'] ?>
+                            <?php  if(isset($_SESSION['errors']['mail'])){ echo $_SESSION['errors']['mail']; } ?>
+                            <?= isset($_SESSION['errors']['mail']) ?>
                         </div>
                         <div class="form-group col-12">
                             <label for="phone"></label>
-                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Téléphone" required>
-                            <?= $_SESSION['errors']['phone'] ?>
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Téléphone ( 0600000000 )" required>
+                            <?php  if(isset($_SESSION['errors']['phone'])){ echo $_SESSION['errors']['phone']; } ?>
+                            <?= isset($_SESSION['errors']['phone']) ?>
                         </div>
                         <div class="form-group col-12">
                             <select name="subject" class="form-control" required>
@@ -55,15 +52,17 @@ session_start();
                                 <option value="2">Probleme de paiement</option>
                                 <option value="3">Juste pour nous prendre la tête</option>
                             </select>
-                            <?= $_SESSION['errors']['subject'] ?>
+                            <?php  if(isset($_SESSION['errors']['subject'])){ echo $_SESSION['errors']['subject']; } ?>
+                            <?= isset($_SESSION['errors']['subject']) ?>
                         </div>
                     </div>
                     <div class="form-box-2 col-12 col-md-5">
                         <div class="form-group col-12">
                             <label for="text"></label>
                             <textarea class="form-control" id="text" name="text" rows="5" placeholder="Votre message" required></textarea>
-                            <?= $_SESSION['errors']['text'] ?>
-                            <button type="submit" class="btn col-12 contact-btn">Envoyer</button>
+                            <?php  if(isset($_SESSION['errors']['text'])){ echo $_SESSION['errors']['text']; } ?>
+                            <?= isset($_SESSION['errors']['text']) ?>
+                            <button type="submit" class="btn col-8 offset-2 contact-btn">Envoyer</button>
                         </div>
                     </div>
                 </div>
